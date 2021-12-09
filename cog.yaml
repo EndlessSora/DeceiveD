@@ -1,0 +1,25 @@
+build:
+  gpu: true
+  python_version: "3.8"
+  system_packages:
+    - "libgl1-mesa-glx"
+    - "libglib2.0-0"
+    - "ninja-build"
+  python_packages:
+    - "Pillow==8.4.0"
+    - "iPython==7.22.0"
+    - "numpy==1.19.2"
+    - "torch==1.7.1"
+    - "torchvision==0.8.2"
+    - "tensorboard==2.7.0"
+    - "scipy==1.7.3"
+    - "opencv-python==4.5.4.60"
+    - "click==8.0.3"
+    - "tqdm==4.62.3"
+    - "pyspng==0.1.0"
+    - "imageio-ffmpeg==0.4.3"
+    - "psutil==5.8.0"
+  run:
+    - pip install git+https://github.com/openai/CLIP.git
+
+predict: "predict.py:Predictor"
